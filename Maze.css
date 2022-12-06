@@ -1,37 +1,23 @@
-html,
-body {
-  width: 100vw;
-  height: 100vh;
-  position: absolute; 
-  padding: 0;
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0; 
+  padding: 0;
 }
 
-#mazeContainer {
-  transition-property: opacity;
-  transition-duration: 1s;
-  transition-timing-function: linear;
+#holder {
   top: 75px;
-  opacity: 0;
   display: inline-block;
   background-color:#F3D332; 
   margin:auto;
-  
 }
-#mazeContainer #mazeCanvas {
+#canvas {
   margin: 0;
   display: block;
   border: solid 1px black;
 }
 
 input{
-  transition-property: background-color opacity;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.3);
   height: 45px;
@@ -57,21 +43,16 @@ input:focus{
 }
 
 
-#Message-Container {
+#message {
   visibility: hidden;
   color: white;
   display: block;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
   background-color: rgba(0, 0, 0, 0.3);
-  z-index: 1;
 }
-#Message-Container #message {
+#message>div {
   width: 300px;
   height: 300px;
   position: fixed;
@@ -109,8 +90,8 @@ input:focus{
     padding: 0;
     cursor: pointer;
     outline-offset: 4px;
-  }
-  .front {
+}
+.front {
     display: block;
     padding: 12px 42px;
     border-radius: 12px;
@@ -118,11 +99,11 @@ input:focus{
     background: hsl(345deg 100% 47%);
     color: white;
     transform: translateY(-6px);
-  }
+}
 
-  .pushable:active .front {
+.pushable:active .front {
     transform: translateY(-2px);
-  }
+}
 
 #page #view {
   background: rgb(196,210,108);
