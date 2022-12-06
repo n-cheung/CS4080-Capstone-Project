@@ -441,8 +441,8 @@ var cellSize;
 // sprite.src = 'media/sprite.png';
 
 window.onresize = function() {
-  const view = document.getElementById('view').getClientRects();
-  const min =  Math.floor(Math.min(view.width, view.height) * 0.9);
+  const view = document.getElementById('view').getClientRects()[0];
+  const min =  Math.floor(Math.min(view.width, view.height) * 0.8);
   canvas.style.width = min + 'px';
   canvas.style.height = min + 'px';
 
@@ -454,8 +454,8 @@ window.onresize = function() {
 };
 
 window.onload = function() {
-  const view = document.getElementById('view').getClientRects();
-  const min =  Math.floor(Math.min(view.width, view.height) * 0.9);
+  const view = document.getElementById('view').getClientRects()[0];
+  const min =  Math.floor(Math.min(view.width, view.height) * 0.8);
   canvas.style.width = min + 'px';
   canvas.style.height = min + 'px';
 
