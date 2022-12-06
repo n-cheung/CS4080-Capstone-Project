@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Game</title>
+  <link rel="stylesheet" href="Maze.css">
+  <body>
+    <div id="gradient"></div>
+    <div id="page">
+      <div id="Message-Container">
+        <div id="message">
+          <h1>Congratulations!</h1>
+          <p id="moves"></p>
+          <input id="okBtn" type="button" onclick="toggleVisablity('Message-Container')" value="Play Again" />
+        </div>
+      </div>
+      <div id="menu">
+        <div class="custom-select" style="display: none;">
+          <select id="diffSelect">
+                    <option value="10">Easy</option>                                  
+          </select>
+        </div>
+        <!-- <input id="startMazeBtn" type="button" onclick="makeMaze()" value="START" style=" background-color:#e69138; width: 150px; font-size: larger; font-weight: bolder; color: #274E13; border-radius: 30px; z-index: 1px;"/> -->
+        <button class="pushable" onclick="makeMaze()">
+            <span class="front">
+             Start
+            </span>
+      </div>
+      <div id="view">
+        <div id="mazeContainer">
+          <canvas id="mazeCanvas" class="border" height="1100" width="1100"></canvas>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="Maze.js"></script>
+  </body>
+</html>
